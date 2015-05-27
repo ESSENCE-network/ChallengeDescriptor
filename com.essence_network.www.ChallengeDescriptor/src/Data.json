@@ -1,0 +1,325 @@
+[
+    {
+        "Freebase_id": "/m/07h_j",
+        "Answer": "Alhambra",
+        "Type": "/travel/tourist_attraction",
+        "Location_latitude": 37.177086,
+        "Hints": [
+            "royal palace",
+            "southwest europe",
+            "eastern empire",
+            "pearls",
+            "lions"
+        ],
+        "Id": 1,
+        "Location_longitude": -3.588313
+    },
+    {
+        "Freebase_id": "/m/01xgt5",
+        "Answer": "Trevi Fountain",
+        "Type": "/travel/tourist_attraction",
+        "Location_latitude": 41.901173,
+        "Hints": [
+            "young girl",
+            "sweet life",
+            "wishes",
+            "coin",
+            "tritons",
+            "horses"
+        ],
+        "Id": 2,
+        "Location_longitude": 12.483317
+    },
+    {
+        "Freebase_id": "/m/0g6n3",
+        "Answer": "Sagrada Família",
+        "Type": "/travel/tourist_attraction",
+        "Location_latitude": 41.40361,
+        "Hints": [
+            "southwest europe",
+            "roman church",
+            "modern art",
+            "eighteen spires",
+            "three facades"
+        ],
+        "Id": 3,
+        "Location_longitude": 2.174444
+    },
+    {
+        "Freebase_id": "/m/027hc9q",
+        "Answer": "Alcázar of Segovia",
+        "Type": "/architecture/building",
+        "Location_latitude": 40.9525,
+        "Hints": [
+            "ancient castle",
+            "southwestern europe",
+            "two rivers",
+            "cinderella",
+            "rocky crag"
+        ],
+        "Id": 4,
+        "Location_longitude": -4.132778
+    },
+    {
+        "Freebase_id": "/m/031y2",
+        "Answer": "Florence",
+        "Type": "/location/citytown,/location/location",
+        "Location_latitude": 43.783333,
+        "Hints": [
+            "renaissance city",
+            "southern europe",
+            "famous sculptors",
+            "monuments",
+            "fountain",
+            "cathedral",
+            "wine"
+        ],
+        "Id": 5,
+        "Location_longitude": 11.25
+    },
+    {
+        "Freebase_id": "/m/05ywg",
+        "Answer": "Prague",
+        "Type": "/location/citytown",
+        "Location_latitude": 50.083332,
+        "Hints": [
+            "old capital",
+            "bridge",
+            "wall",
+            "square",
+            "castle"
+        ],
+        "Id": 6,
+        "Location_longitude": 14.416667
+    },
+    {
+        "Freebase_id": "/m/09949m",
+        "Answer": "Istanbul",
+        "Type": "/location/citytown",
+        "Location_latitude": 41.01361,
+        "Hints": [
+            "ancient city",
+            "continents",
+            "seas",
+            "empires",
+            "religions",
+            "four domes"
+        ],
+        "Id": 7,
+        "Location_longitude": 28.955
+    },
+    {
+        "Freebase_id": "/m/07_pf",
+        "Answer": "Venice",
+        "Type": "/location/citytown,/location/location",
+        "Location_latitude": 45.4375,
+        "Hints": [
+            "tourist attraction",
+            "sea",
+            "islands",
+            "channels",
+            "bridges",
+            "boats",
+            "art festivals",
+            "republic(rivers)"
+        ],
+        "Id": 8,
+        "Location_longitude": 12.335833
+    },
+    {
+        "Freebase_id": "m/095w_",
+        "Answer": "Budapest",
+        "Type": "/location/citytown",
+        "Location_latitude": 47.4925,
+        "Hints": [
+            "old city",
+            "big empire",
+            "unification",
+            "two banks",
+            "pearl"
+        ],
+        "Id": 9,
+        "Location_longitude": 19.05139
+    },
+    {
+        "Freebase_id": "/m/0k3p",
+        "Answer": "Amsterdam",
+        "Type": "/location/citytown",
+        "Location_latitude": 52.36667,
+        "Hints": [
+            "western europe",
+            "channels",
+            "dam",
+            "famous painter",
+            "museums",
+            "flower fields"
+        ],
+        "Id": 10,
+        "Location_longitude": 4.9
+    },
+    {
+        "Freebase_id": "/m/0n2z",
+        "Answer": "Athens",
+        "Type": "/location/citytown",
+        "Location_latitude": 37.966667,
+        "Hints": [
+            "historical city",
+            "mythology",
+            "gods",
+            "monuments",
+            "hills",
+            "temples",
+            "democracy",
+            "ancient state"
+        ],
+        "Id": 11,
+        "Location_longitude": 23.716667
+    },
+    {
+        "Freebase_id": "/m/04gdr",
+        "Answer": "Louvre",
+        "Type": "/travel/tourist_attraction",
+        "Location_latitude": 48.86111,
+        "Hints": [
+            "palace",
+            "pyramid",
+            "light",
+            "historic monument",
+            "global art"
+        ],
+        "Id": 12,
+        "Location_longitude": 2.336389
+    },
+    {
+        "Freebase_id": "/m/0h2c3",
+        "Answer": "Ibiza",
+        "Type": "/location/statistical_region",
+        "Location_latitude": 38.98,
+        "Hints": [
+            "mediterranean",
+            "pines",
+            "cruises",
+            "bays",
+            "nightlife",
+            "music",
+            "egg"
+        ],
+        "Id": 13,
+        "Location_longitude": 1.43
+    },
+    {
+        "Freebase_id": "/m/04llb",
+        "Answer": "Lisbon",
+        "Type": "/location/citytown",
+        "Location_latitude": 38.71389,
+        "Hints": [
+            "old city",
+            "coast",
+            "peninsula",
+            "westernmost",
+            "rich architecture",
+            "explorers"
+        ],
+        "Id": 14,
+        "Location_longitude": -9.139444
+    },
+    {
+        "Freebase_id": "/m/0dpk_",
+        "Answer": "Niagara Falls",
+        "Type": "/geography/waterfall",
+        "Location_latitude": 43.08,
+        "Hints": [
+            "tourist attraction",
+            "border",
+            "glacier",
+            "river",
+            "great lakes",
+            "three waterfalls"
+        ],
+        "Id": 15,
+        "Location_longitude": -79.071
+    },
+    {
+        "Freebase_id": "/m/05qtj",
+        "Answer": "Paris",
+        "Type": "/location/citytown",
+        "Location_latitude": 48.8567,
+        "Hints": [
+            "famous city",
+            "light",
+            "tower",
+            "pyramid",
+            "victory",
+            "palace",
+            "cathedral",
+            "tennis",
+            "fashion",
+            "musem"
+        ],
+        "Id": 16,
+        "Location_longitude": 2.3508
+    },
+    {
+        "Freebase_id": "/m/04jpl",
+        "Answer": "London",
+        "Type": "/location/citytown",
+        "Location_latitude": 51.50722,
+        "Hints": [
+            "global city",
+            "island",
+            "river",
+            "royal palace",
+            "old underground",
+            "historic tower"
+        ],
+        "Id": 17,
+        "Location_longitude": -0.1275
+    },
+    {
+        "Freebase_id": "/m/06y57",
+        "Answer": "Sydney",
+        "Type": "/location/citytown",
+        "Location_latitude": -33.865,
+        "Hints": [
+            "multicultural city",
+            "natural harbour",
+            "colony",
+            "ocean",
+            "opera"
+        ],
+        "Id": 18,
+        "Location_longitude": 151.20944
+    },
+    {
+        "Freebase_id": "/m/0fhp9",
+        "Answer": "Vienna",
+        "Type": "/location/citytown",
+        "Location_latitude": 48.2,
+        "Hints": [
+            "old capital",
+            "world organization",
+            "music",
+            "psychologist",
+            "memorial",
+            "imperial palace"
+        ],
+        "Id": 19,
+        "Location_longitude": 16.366667
+    },
+    {
+        "Freebase_id": "/m/06mxs",
+        "Answer": "Stockholm",
+        "Type": "/location/citytown",
+        "Location_latitude": 59.329445,
+        "Hints": [
+            "old city",
+            "northern europe ",
+            "islands",
+            "lake",
+            "sea",
+            "marathon"
+        ],
+        "Id": 20,
+        "Location_longitude": 18.068611
+    }
+]

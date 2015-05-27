@@ -1,6 +1,7 @@
 package com.essence_network.www.ChallengeDescriptor.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 
 //import org.json.simple.parser.JSONParser;
 import com.essence_network.com.ChallengeDescriptor.dao.ChallengeEntry;
@@ -39,6 +41,10 @@ public class Entries extends HttpServlet {
 	  
     HttpSession session = request.getSession(true);
     String answer=request.getParameter("answer");
+    
+    if(request.getCharacterEncoding() == null)
+        request.setCharacterEncoding("UTF-8");
+    
     PrintWriter out = response.getWriter();
     out.println("Your Answer: " + answer);
     
@@ -68,12 +74,6 @@ public class Entries extends HttpServlet {
     	instanceNumber++;
     	hintNumber = 0;
     }
-    
-    
-     
-    
-    
-
     
     // Set the session valid for 3600 secs
     session.setMaxInactiveInterval(3600);
