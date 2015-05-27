@@ -1,8 +1,9 @@
 package com.essence_network.com.ChallengeDescriptor.dao;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,8 @@ public class EntriesReader {
 	  ArrayList<ChallengeEntry> list = new ArrayList<>();
 
 	  JSONParser parser = new JSONParser();
-	  JSONArray a = (JSONArray) parser.parse(new FileReader("C:\\Users\\Khuyagbaatar\\git\\ChallengeDescriptor\\data\\data.json"));
+	  InputStream in = this.getClass().getClassLoader().getResourceAsStream("Data.json");
+	  JSONArray a = (JSONArray) parser.parse(new InputStreamReader(in));
 
 	  while(!a.isEmpty()){
 		  JSONObject obj = (JSONObject)a.remove(0);
