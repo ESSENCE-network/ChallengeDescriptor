@@ -18,7 +18,7 @@ public class EntriesReader {
 	  ArrayList<ChallengeEntry> list = new ArrayList<>();
 
 	  JSONParser parser = new JSONParser();
-	  JSONArray a = (JSONArray) parser.parse(new FileReader("/Users/niki/Desktop/ESSENCE challenge/challengeDS.json"));
+	  JSONArray a = (JSONArray) parser.parse(new FileReader("C:\\Users\\Khuyagbaatar\\git\\ChallengeDescriptor\\data\\data.json"));
 
 	  while(!a.isEmpty()){
 		  JSONObject obj = (JSONObject)a.remove(0);

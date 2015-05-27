@@ -38,9 +38,13 @@ public class Entries extends HttpServlet {
   	int hintNumber;
 	  
     HttpSession session = request.getSession(true);
+    String answer=request.getParameter("answer");
+    PrintWriter out = response.getWriter();
+    out.println("Your Answer: " + answer);
+    
     if (session.isNew()) {
     	instanceNumber = 0;
-    	hintNumber = 0;
+    	hintNumber = -1;
     	
         session.setAttribute("instanceNumber", instanceNumber);
         session.setAttribute("hintNumber", hintNumber);
@@ -55,12 +59,16 @@ public class Entries extends HttpServlet {
     
     String hint = "";
     List<String> hints = entries.get(instanceNumber).get_hints();
-    if (hintNumber >= hints.size()) {
-    	hint = hints.get(hintNumber);
+    out.println("Total size of hints: "+hints.size());
+    if (hintNumber < hints.size()-1) {
+    	hintNumber++; hint = hints.get(hintNumber);  
+    	if (entries.get(instanceNumber).get_answer().equals(answer)) out.println("Success!");
+    	else out.println("No, "+hint);
     } else {
     	instanceNumber++;
     	hintNumber = 0;
     }
+    
     
      
     
@@ -70,17 +78,17 @@ public class Entries extends HttpServlet {
     // Set the session valid for 3600 secs
     session.setMaxInactiveInterval(3600);
     response.setContentType("text/plain");
-    PrintWriter out = response.getWriter();
+    
 //    if (session.isNew()) {
 //      count++;
 //    } 
     
     //JSONParser parser = new JSONParser();
     
-    out.println(instanceNumber + " " + hintNumber + " " + hint);
-    
-	instanceNumber++;
-	hintNumber++;
+    //out.println(instanceNumber + " " + hintNumber + " " + hint);
+    out.println("Exact Answer: " + entries.get(instanceNumber).get_answer());
+	//instanceNumber++;
+	//hintNumber++;
 	session.setAttribute("instanceNumber", instanceNumber);
     session.setAttribute("hintNumber", hintNumber);
 
