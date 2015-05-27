@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.parser.JSONParser;
+
 import com.essence_network.com.ChallengeDescriptor.dao.FileDao;
 
 /**
@@ -35,6 +37,10 @@ public class FileCounter extends HttpServlet {
     if (session.isNew()) {
       count++;
     } 
+    
+    JSONParser parser = new JSONParser();
+    
+    
     out.println("This site has been accessed " + count + " times." + System.getProperty("catalina.base"));
     
     // saving file at each request

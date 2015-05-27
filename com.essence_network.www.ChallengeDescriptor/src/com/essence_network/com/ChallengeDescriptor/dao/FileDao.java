@@ -16,7 +16,7 @@ public class FileDao {
     BufferedReader bufferedReader = null;
     PrintWriter writer = null;
     try {
-      File f = new File("FileCounter.initial");
+      File f = new File("/Users/niki/FileCounter.initial");
       if (!f.exists()) {
         f.createNewFile();
         writer = new PrintWriter(new FileWriter(f));
