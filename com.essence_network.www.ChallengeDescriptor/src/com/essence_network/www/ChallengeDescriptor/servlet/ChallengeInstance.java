@@ -23,8 +23,8 @@ public class ChallengeInstance extends HttpServlet {
 	private ArrayList<ChallengeEntry> entries = new ArrayList<>(); 
 	
 	public void load_entries(String direction){
-		JSONParser parser = new JSONParser();
-		JSONArray a = (JSONArray) parser.parse(new FileReader(direction));
+		//JSONParser parser = new JSONParser();
+		//JSONArray a = (JSONArray) parser.parse(new FileReader(direction));
 	}
        
     /**
