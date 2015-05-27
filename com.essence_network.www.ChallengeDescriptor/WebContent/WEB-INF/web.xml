@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>FileCounter</display-name>
+    <servlet-name>FileCounter</servlet-name>
+    <servlet-class>com.vogella.web.filecounter.servlet.FileCounter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileCounter</servlet-name>
+    <url-pattern>/FileCounter</url-pattern>
+  </servlet-mapping>
 </web-app>
