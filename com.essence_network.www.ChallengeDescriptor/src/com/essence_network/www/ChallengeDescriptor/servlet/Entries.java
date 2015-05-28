@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+
+
+
+import org.json.simple.JSONObject;
 
 
 //import org.json.simple.parser.JSONParser;
@@ -38,23 +44,22 @@ public class Entries extends HttpServlet {
 	  
 	int instanceNumber;
   	int hintNumber;
-	  
+  	Random randomGenerator = new Random();
+  	
     HttpSession session = request.getSession(true);
     String answer=request.getParameter("answer");
+    JSONObject ret = new JSONObject();
     
     if(request.getCharacterEncoding() == null)
         request.setCharacterEncoding("UTF-8");
-    
-    PrintWriter out = response.getWriter();
-    out.println("Your Answer: " + answer);
-    
-    if (session.isNew()) {
-    	instanceNumber = 0;
+        
+    if (session.isNew() || session.getAttribute("instanceNumber")==null) {
+    	instanceNumber = randomGenerator.nextInt(entries.size());
     	hintNumber = -1;
     	
         session.setAttribute("instanceNumber", instanceNumber);
         session.setAttribute("hintNumber", hintNumber);
-    } else {
+    } else {    	
     	instanceNumber = (Integer)session.getAttribute("instanceNumber");
     	hintNumber = (Integer)session.getAttribute("hintNumber");
     }
@@ -65,45 +70,33 @@ public class Entries extends HttpServlet {
     
     String hint = "";
     List<String> hints = entries.get(instanceNumber).get_hints();
-    out.println("Total size of hints: "+hints.size());
-    if (hintNumber < hints.size()-1) {
-    	hintNumber++; hint = hints.get(hintNumber);  
-    	if (entries.get(instanceNumber).get_answer().equals(answer)) out.println("Success!");
-    	else out.println("No, "+hint);
-    } else {
-    	instanceNumber++;
-    	hintNumber = 0;
-    }
+    //out.println("Total size of hints: "+hints.size());
     
+    if (entries.get(instanceNumber).get_answer().equals(answer)) {
+		ret.put("success", "YES");
+		ret.put("next_hint", "");
+		ret.put("game_progress", "Over");
+		
+	} else {
+	    if (hintNumber < hints.size()-1) {
+	    	hintNumber++; hint = hints.get(hintNumber);  
+	    	ret.put("success", "NO");
+	    	ret.put("next_hint", hint);
+	    	ret.put("game_progress", "Going");
+	    } else {
+	    	ret.put("success", "NO");
+			ret.put("game_progress", "Over");
+			ret.put("answer", entries.get(instanceNumber).get_answer());
+	    }
+	}
+
     // Set the session valid for 3600 secs
     session.setMaxInactiveInterval(3600);
-    response.setContentType("text/plain");
-    
-//    if (session.isNew()) {
-//      count++;
-//    } 
-    
-    //JSONParser parser = new JSONParser();
-    
-    //out.println(instanceNumber + " " + hintNumber + " " + hint);
-    out.println("Exact Answer: " + entries.get(instanceNumber).get_answer());
-	//instanceNumber++;
-	//hintNumber++;
 	session.setAttribute("instanceNumber", instanceNumber);
     session.setAttribute("hintNumber", hintNumber);
-
-//    for(ChallengeEntry c : entries){
-//    	out.println(c.toString());
-//    }
-    //out.println(content);
-    //out.println("This site has been accessed " + count + " times." + System.getProperty("catalina.base"));
-    
-    // saving file at each request
-//    try {
-//        dao.save(count);
-//      } catch (Exception e) {
-//        e.printStackTrace();
-//      }
+    //response.setContentType("text/x-json");
+    response.setContentType("application/json");
+    response.getWriter().write(ret.toString());
   }
 
   
